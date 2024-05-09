@@ -7,5 +7,6 @@ type DBHandler interface {
 	FindAllCards() ([]*domain.Card, error)
 
 	SaveAccount(account domain.Account) error
+	UpdateAccount(account domain.Account) error
 	SaveCard(card domain.Card) error
 }
