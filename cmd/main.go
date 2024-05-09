@@ -47,9 +47,9 @@ func main() {
 	}
 	cardController := getCardController()
 	accountController := getAccountController()
-	httpRouter.POST("/book/add", cardController.Add)
-	httpRouter.GET("/book", accountController.FindAll)
-	httpRouter.POST("/author/add", accountController.Add)
+	httpRouter.POST("/card/add", cardController.Add)
+	httpRouter.GET("/card", accountController.FindAll)
+	httpRouter.POST("/account/add", accountController.Add)
 	httpRouter.SERVE(":8000")
 
 	fmt.Println("hello")
