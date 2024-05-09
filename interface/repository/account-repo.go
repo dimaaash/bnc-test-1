@@ -20,7 +20,7 @@ func (repo AccountRepo) SaveAccount(account domain.Account) error {
 	return nil
 }
 
-func (repo AccountRepo) FindAll() ([]*domain.Account, error) {
+func (repo AccountRepo) FindAllAccounts() ([]*domain.Account, error) {
 	results, err := repo.handler.FindAllAccounts()
 	if err != nil {
 		return results, err

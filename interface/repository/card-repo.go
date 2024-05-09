@@ -20,7 +20,7 @@ func (repo CardRepo) SaveCard(card domain.Card) error {
 	return nil
 }
 
-func (repo CardRepo) FindAll() ([]*domain.Card, error) {
+func (repo CardRepo) FindAllCards() ([]*domain.Card, error) {
 	results, err := repo.handler.FindAllCards()
 	if err != nil {
 		return results, err
