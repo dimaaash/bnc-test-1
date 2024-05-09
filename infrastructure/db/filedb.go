@@ -54,7 +54,7 @@ func (dbHandler DBHandler) FindAllCards() ([]*domain.Card, error) {
 
 	log.Println("===> DB FindAllCards <===")
 
-	var cards []*domain.Card
+	var cards []domain.Card
 
 	cards = dbHandler.DB.Find(&cards)
 

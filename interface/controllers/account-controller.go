@@ -34,3 +34,15 @@ func (controller *AccountController) Add(res http.ResponseWriter, req *http.Requ
 	}
 	res.WriteHeader(http.StatusOK)
 }
+
+func (controller *AccountController) FindAll(res http.ResponseWriter, req *http.Request) {
+	res.Header().Set("Content-Type", "application/json")
+	results, err2 := controller.accountInteractor.FindAllAccounts()
+	if err2 != nil {
+		res.WriteHeader(http.StatusInternalServerError)
+		json.NewEncoder(res).Encode(ErrorResponse{Message: err2.Error()})
+		return
+	}
+	res.WriteHeader(http.StatusOK)
+	json.NewEncoder(res).Encode(results)
+}

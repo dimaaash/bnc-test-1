@@ -37,7 +37,7 @@ func (controller *CardController) Add(res http.ResponseWriter, req *http.Request
 
 func (controller *CardController) FindAll(res http.ResponseWriter, req *http.Request) {
 	res.Header().Set("Content-Type", "application/json")
-	results, err2 := controller.cardInteractor.FindAll()
+	results, err2 := controller.cardInteractor.FindAllCards()
 	if err2 != nil {
 		res.WriteHeader(http.StatusInternalServerError)
 		json.NewEncoder(res).Encode(ErrorResponse{Message: err2.Error()})

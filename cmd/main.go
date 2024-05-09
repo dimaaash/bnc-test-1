@@ -29,8 +29,8 @@ func getCardController() controllers.CardController {
 
 func getAccountController() controllers.AccountController {
 	accountRepo := repository.NewAccountRepo(dbHandler)
-	accountInteractor := usecases.NewAuthorInteractor(accountRepo)
-	accountController := controllers.NewAuthorController(accountInteractor)
+	accountInteractor := usecases.NewAccountInteractor(accountRepo)
+	accountController := controllers.NewAccountController(accountInteractor)
 	return *accountController
 }
 
