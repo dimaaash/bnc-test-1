@@ -41,5 +41,5 @@ type Card struct {
 
 type CardRepository interface {
 	SaveCard(card Card) error
-	FindAll() ([]*Card, error)
+	FindAllCards() ([]*Card, error)
 }
