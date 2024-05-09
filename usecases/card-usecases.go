@@ -26,7 +26,7 @@ func (interactor *CardInteractor) CreateCard(card domain.Card) error {
 // FindAllCards
 
 func (interactor *CardInteractor) FindAllCards() ([]*domain.Card, error) {
-	results, err := interactor.CardRepository.FindAll()
+	results, err := interactor.CardRepository.FindAllCards()
 	if err != nil {
 		log.Println(err.Error())
 		return nil, err

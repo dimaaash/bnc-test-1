@@ -32,5 +32,5 @@ type Account struct {
 type AccountRepository interface {
 	SaveAccount(account Account) error
 	FindAllAccounts() ([]*Account, error)
-	Debit()
+	UpdateAccount(account Account) error
 }

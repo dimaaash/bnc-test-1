@@ -143,6 +143,17 @@ func (dbHandler DBHandler) FindAllCards() ([]*domain.Card, error) {
 	return cards, nil
 }
 
+func (dbHandler DBHandler) UpdateAccount(card domain.Account) error {
+	log.Println("===> DB UpdateAccount <===")
+
+	// collection := dbHandler.DB.Collection("cards")
+	// _, err := collection.InsertOne(context.TODO(), card)
+	// if err != nil {
+	// 	return err
+	// }
+	return nil
+}
+
 func (dbHandler DBHandler) SaveCard(card domain.Card) error {
 	log.Println("===> DB SaveCard <===")
 

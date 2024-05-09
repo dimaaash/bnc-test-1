@@ -27,3 +27,11 @@ func (repo AccountRepo) FindAllAccounts() ([]*domain.Account, error) {
 	}
 	return results, nil
 }
+
+func (repo AccountRepo) UpdateAccount(account domain.Account) error {
+	err := repo.handler.UpdateAccount(account)
+	if err != nil {
+		return err
+	}
+	return nil
+}

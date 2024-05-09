@@ -24,7 +24,7 @@ func (interactor *AccountInteractor) CreateAccount(account domain.Account) error
 }
 
 func (interactor *AccountInteractor) FindAllAccounts() ([]*domain.Account, error) {
-	results, err := interactor.AccountRepository.FindAll()
+	results, err := interactor.AccountRepository.FindAllAccounts()
 	if err != nil {
 		log.Println(err.Error())
 		return nil, err
