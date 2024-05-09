@@ -143,7 +143,7 @@ func (dbHandler DBHandler) FindAllCards() ([]*domain.Card, error) {
 	return cards, nil
 }
 
-func (dbHandler DBHandler) UpdateAccount(card domain.Account) error {
+func (dbHandler DBHandler) UpdateAccount(account domain.Account) error {
 	log.Println("===> DB UpdateAccount <===")
 
 	// collection := dbHandler.DB.Collection("cards")

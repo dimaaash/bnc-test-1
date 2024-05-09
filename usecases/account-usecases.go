@@ -34,3 +34,12 @@ func (interactor *AccountInteractor) FindAllAccounts() ([]*domain.Account, error
 
 	return results, nil
 }
+
+func (interactor *AccountInteractor) UpdateAccount(account domain.Account) error {
+	err := interactor.AccountRepository.UpdateAccount(account)
+	if err != nil {
+		log.Println(err.Error())
+		return err
+	}
+	return nil
+}
