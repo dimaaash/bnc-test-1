@@ -3,7 +3,7 @@ package usecases
 import (
 	"log"
 
-	"github.com/github.com/dimaaash/bnc-test-1/domain"
+	"github.com/dimaaash/bnc-test-1/domain"
 )
 
 type AccountInteractor struct {
