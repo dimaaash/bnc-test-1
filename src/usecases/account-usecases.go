@@ -3,19 +3,19 @@ package usecases
 import (
 	"log"
 
-	"github.com/vidu171/clean-architecture-go/domain"
+	"github.com/github.com/dimaaash/bnc-test-1/domain"
 )
 
-type AuthorInteractor struct {
-	AuthorRepository domain.AuthorRepository
+type AccountInteractor struct {
+	AccountRepository domain.AccountRepository
 }
 
-func NewAuthorInteractor(AuthorRepository domain.AuthorRepository) AuthorInteractor {
-	return AuthorInteractor{AuthorRepository}
+func NewAccountInteractor(AccountRepository domain.AccountRepository) AccountInteractor {
+	return AccountInteractor{AccountRepository}
 }
 
-func (interactor *AuthorInteractor) CreateAuthor(author domain.Author) error {
-	err := interactor.AuthorRepository.SaveAuthor(author)
+func (interactor *AccountInteractor) CreateAccount(account domain.Account) error {
+	err := interactor.AccountRepository.SaveAccount(account)
 	if err != nil {
 		log.Println(err.Error())
 		return err
